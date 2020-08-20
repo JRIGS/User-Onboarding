@@ -10,7 +10,7 @@ import formSchema from './validation/formSchema';
   const initialDisabled = true
 
   const initialFormErrors = {
-    username: '',
+    name: '',
     email: '',
     password: '',
     tos: '',
@@ -70,7 +70,7 @@ const inputChange = (name, value) => {
 
 const submit = () => {
   const newUser = {
-    username: memberInfo.name.trim(),
+    name: memberInfo.name.trim(),
     email: memberInfo.email.trim(),
     password: memberInfo.password.trim()
   }

@@ -27,7 +27,7 @@ return (
 
     <form>
         <div className="errors-container">
-          <div>{formErrors.username}</div>
+          <div>{formErrors.name}</div>
           <div>{formErrors.password}</div>
           <div>{formErrors.email}</div>
           <div>{formErrors.tos}</div>
