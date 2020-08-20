@@ -75,6 +75,7 @@ const submit = () => {
     password: memberInfo.password.trim()
   }
   postNewMember(newUser)
+  setMemberInfo(initialFormErrors)//clear input fields
   //postNewMember is made below
 }
 
@@ -97,6 +98,7 @@ useEffect(() => {
   formSchema.isValid(memberInfo)
   .then(valid => {
     setDisabled(!valid);
+    console.log(valid);
   })
 }, [memberInfo])
 
@@ -105,9 +107,9 @@ useEffect(() => {
 
   return (
     <div className='container'>
-
+      
    <Form 
-   memberInfo={memberInfo} 
+   memberInfo={memberInfo}    
    checkboxChange={checkboxChange} 
    inputChange={inputChange} 
    submit={submit}
@@ -122,7 +124,7 @@ useEffect(() => {
               <section className="member-card">
               <h1>{member.name}</h1>
               <h1>{member.email}</h1>
-              <h1>{member.password}</h1>
+              {/* <h1>{member.password}</h1> */}
               </section>
              )
           })
